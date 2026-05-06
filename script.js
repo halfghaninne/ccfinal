@@ -1,6 +1,8 @@
 let LAT;
 let LON;
 let CITY;
+let FILE_COUNT = 2; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+
 
 async function myOnload() {
     console.log("beep!")
@@ -20,6 +22,21 @@ async function myOnload() {
     }
 }
 
+async function onCascadeLoad() {
+    const NEXT = parseInt(localStorage.getItem("count")) + 1;
+    console.log("NEXT: ", NEXT);
+    console.log("FILE_COUNT: ", FILE_COUNT);
+    if (NEXT <= FILE_COUNT) {
+        localStorage.setItem("count", NEXT.toString());
+        //setTimeout(openNextPage(NEXT), 5000)
+        setTimeout(() => {console.log('timeout fired!')}, 5000);
+    }
+}
+
+async function openNextPage(pageCount) {
+    window.open(`./popups/${pageCount}.html`, "_unfencedTop") // TODO open at a randomized location on screen
+}
+
 async function setLocation(lat, lon) {
     const url = `https://us1.locationiq.com/v1/reverse?key=${API_KEY}&lat=${LAT}&lon=${LON}&format=json&`
         try {
@@ -31,6 +48,7 @@ async function setLocation(lat, lon) {
             const result = await response.json();
             CITY = result.address.city
             console.log(CITY);
+            localStorage.setItem("CITY", CITY);
         } catch (error) {
             console.error(error.message);
         };
@@ -39,8 +57,14 @@ async function setLocation(lat, lon) {
 
 async function startCascade() {
     // FOR NOW:
+    localStorage.setItem("count", "1");
+    console.log(localStorage.getItem("CITY"))
     
 
-    // console.log("firing function!");
-    open(`./popups/template.html?city=${CITY}`, "_unfencedTop", "width=500, height=500, left=200, top=200");
+    // get data, using city name from local storage
+    // if no data for city 
+        // load a message about no info yet
+    // if data
+        // start cascade
+    window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=500, left=200, top=200");
 }
