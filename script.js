@@ -45,7 +45,6 @@ async function onCascadeLoad() {
 
 async function openNextPage(pageCount) {
     // TODO dynamically set width, height and maybe top, left values based off of data
-    console.log("in openNextPage: ", localStorage.getItem("CITY"))
     const data = DATA[localStorage.getItem("CITY")][pageCount] || {};
     const width = data["width"] || "500";
     const height = data["height"] || "500";
