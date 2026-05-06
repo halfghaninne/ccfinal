@@ -1,7 +1,7 @@
 let LAT;
 let LON;
 let CITY;
-let FILE_COUNT = 2; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+let FILE_COUNT = 33; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 
 async function myOnload() {
@@ -28,13 +28,14 @@ async function onCascadeLoad() {
     console.log("FILE_COUNT: ", FILE_COUNT);
     if (NEXT <= FILE_COUNT) {
         localStorage.setItem("count", NEXT.toString());
-        //setTimeout(openNextPage(NEXT), 5000)
-        setTimeout(() => {console.log('timeout fired!')}, 5000);
+        setTimeout(() => openNextPage(NEXT), 1000)
+        //setTimeout(() => {console.log('timeout fired!')}, 5000);
     }
 }
 
 async function openNextPage(pageCount) {
-    window.open(`./popups/${pageCount}.html`, "_unfencedTop") // TODO open at a randomized location on screen
+    
+    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=500, height=500`) // TODO open at a randomized location on screen
 }
 
 async function setLocation(lat, lon) {
