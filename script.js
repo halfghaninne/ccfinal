@@ -33,12 +33,15 @@ async function myOnload() {
 // }
 
 async function onCascadeLoad() {
-    const NEXT = parseInt(localStorage.getItem("count")) + 1;
-    console.log("NEXT: ", NEXT);
-    console.log("FILE_COUNT: ", FILE_COUNT);
+    const CURRENT = parseInt(localStorage.getItem("count"));
+    const NEXT = CURRENT + 1;
+    const CITY = localStorage.getItem("CITY");
+    console.log("in onCascadeLoad, CITY: ", CITY);
     if (NEXT <= FILE_COUNT) {
         localStorage.setItem("count", NEXT.toString());
-        setTimeout(() => openNextPage(NEXT), 3000)
+        const ms = DATA[CITY] ? DATA[CITY][NEXT.toString()]["loadInMs"] : 1000;
+
+        setTimeout(() => openNextPage(NEXT), ms)
         //setTimeout(() => {console.log('timeout fired!')}, 5000);
     }
 }
@@ -81,10 +84,5 @@ async function startCascade() {
     } else {
         el = document.getElementById("container")
         el.innerHTML = "<p>no data yet for your current location :(</p>"
-    }
-    // if no data for city 
-        // load a message about no info yet
-    // if data
-        // start cascade
-   
+    }  
 }
