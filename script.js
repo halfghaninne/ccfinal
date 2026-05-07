@@ -1,14 +1,14 @@
 let LAT;
 let LON;
 let CITY;
-let FILE_COUNT = 8; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const SCREEN_W = 1920;
+const SCREEN_H = 1080; 
+const FILE_COUNT = 8; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 
 async function myOnload() {
-    console.log("beep!")
-    
-    console.log("UA data: ", navigator.userAgentData)
-    console.log("platform: ", navigator.platform)
+    //console.log("UA data: ", navigator.userAgentData)
+    //console.log("platform: ", navigator.platform)
     
     if ("geolocation" in navigator) {
         await navigator.geolocation.getCurrentPosition((position) => {
@@ -42,16 +42,16 @@ async function onCascadeLoad() {
         const ms = DATA[CITY] ? DATA[CITY][NEXT.toString()]["loadInMs"] : 1000;
 
         setTimeout(() => openNextPage(NEXT), ms)
-        //setTimeout(() => {console.log('timeout fired!')}, 5000);
     }
 }
 
 async function openNextPage(pageCount) {
-    // TODO dynamically set width, height and maybe top, left values based off of data
     const data = DATA[localStorage.getItem("CITY")][pageCount] || {};
     const width = data["width"] || "500";
     const height = data["height"] || "500";
-    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}`) // TODO open at a randomized location on screen
+    const left = data["left"] || Math.random() * (SCREEN_W - parseInt(width));
+    const top = data["top"] || Math.random() * (SCREEN_H - parseInt(height));
+    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`) // TODO open at a randomized location on screen
 }
 
 async function setLocation(lat, lon) {
@@ -73,10 +73,7 @@ async function setLocation(lat, lon) {
 
 
 async function startCascade() {
-    // FOR NOW:
     localStorage.setItem("count", "1");
-    console.log(localStorage.getItem("CITY"))
-    
 
     // get data, using city name from local storage
     if (DATA[CITY]) {
