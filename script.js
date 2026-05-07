@@ -5,10 +5,73 @@ const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
 const FILE_COUNT = 8; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
+async function proliferateStream() {
+    const video2 = document.querySelector("#video2");
+    const constraints = {
+        audio: false,
+        video: true,
+    };
 
+    navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+        const videoTracks = stream.getVideoTracks();
+        console.log("Got stream with constraints:", constraints);
+        console.log(`Using video device: ${videoTracks[0].label}`);
+        stream.onremovetrack = () => {
+        console.log("Stream ended");
+        };
+        video2.srcObject = stream;
+    })
+    .catch((error) => {
+        if (error.name === "OverconstrainedError") {
+        console.error(
+            `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
+        );
+        } else if (error.name === "NotAllowedError") {
+        console.error(
+            "You need to grant this page permission to access your camera and microphone.",
+        );
+        } else {
+        console.error(`getUserMedia error: ${error.name}`, error);
+        }
+    });
+}
 async function myOnload() {
     //console.log("UA data: ", navigator.userAgentData)
     //console.log("platform: ", navigator.platform)
+
+    const video1 = document.querySelector("#video1");
+    // const video2 = document.querySelector("#video2");
+    const constraints = {
+        audio: false,
+        video: true,
+    };
+
+    navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+        const videoTracks = stream.getVideoTracks();
+        console.log("Got stream with constraints:", constraints);
+        console.log(`Using video device: ${videoTracks[0].label}`);
+        stream.onremovetrack = () => {
+        console.log("Stream ended");
+        };
+        video1.srcObject = stream;
+        // video2.srcObject = stream;
+    })
+    .catch((error) => {
+        if (error.name === "OverconstrainedError") {
+        console.error(
+            `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
+        );
+        } else if (error.name === "NotAllowedError") {
+        console.error(
+            "You need to grant this page permission to access your camera and microphone.",
+        );
+        } else {
+        console.error(`getUserMedia error: ${error.name}`, error);
+        }
+    });
     
     if ("geolocation" in navigator) {
         await navigator.geolocation.getCurrentPosition((position) => {
