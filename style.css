@@ -29,6 +29,7 @@ body {
     color: white;
     border: none;
     background-color: rgb(255 255 128 / 0.1);
+    font-size: xx-large;
 }
 
 #video1 {
@@ -78,6 +79,10 @@ body {
     height: 75px;
     position: absolute;
     z-index: 7;
+}
+
+#startMessage {
+    display: none;
 }
 
 #video2, #video3, #video4, #video5, #video6, #video7 {

@@ -3,7 +3,7 @@ let LON;
 let CITY;
 const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
-const FILE_COUNT = 8; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const FILE_COUNT = 3; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {
@@ -104,7 +104,8 @@ async function openNextPage(pageCount) {
     const height = data["height"] || "500";
     const left = data["left"] || Math.random() * (SCREEN_W - parseInt(width));
     const top = data["top"] || Math.random() * (SCREEN_H - parseInt(height));
-    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
+    const url = data["url"] || `./${pageCount}.html`;
+    window.open(url, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
 }
 
 async function setLocation(lat, lon) {
@@ -135,7 +136,7 @@ async function startCascade() {
 
     })
 
-    // await proliferateStream();  
+    // TODO: show startMessage
 
     // get data, using city name from local storage
     if (DATA[CITY]) {
