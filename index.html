@@ -6,18 +6,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="stylesheet" href="./style.css">
-  <!-- TODO: not final storage solution: -->
   <script src="./data.js"></script> 
+  <!-- TODO: not final storage solution: -->
   <script src="./secrets.js"></script> 
   <script src="./script.js"></script>
 </head>
 <body onload="myOnload()"">
   <div class="flexContainer">
-    <video id="video1" autoplay></video>
-    <video id="video2" autoplay></video>
-    <button onclick="startCascade()" type="button">Click me!</button>
-    <button onclick="proliferateStream()" type="button">Duplicate me!</button>
+    <div class="videoFlexContainer">
+      <video id="video1" autoplay></video>
+      <video id="video2" autoplay></video>
+      <video id="video3" autoplay></video>
+      <video id="video4" autoplay></video>
+      <video id="video5" autoplay></video>
+      <video id="video6" autoplay></video>
+      <video id="video7" autoplay></video>
     </div>
+
+    <div class="test">
+      <button onclick="startCascade()" class="button" type="button">[ ◉¯]✨</button>
+    </div>  
+
+    <!-- <div class="flexContainer">
+    
+    </div> -->
+  </div>
+  
+  
+
   <!-- <button popovertarget="mypop" command="show-popover" id="trigger" type="button">Click me!</button>
   <div id="mypop" popover>Hello!</div> -->
 </body>

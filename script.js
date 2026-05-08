@@ -5,8 +5,7 @@ const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
 const FILE_COUNT = 8; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
-async function proliferateStream() {
-    const video2 = document.querySelector("#video2");
+async function proliferateStream(el) {
     const constraints = {
         audio: false,
         video: true,
@@ -20,7 +19,8 @@ async function proliferateStream() {
         stream.onremovetrack = () => {
         console.log("Stream ended");
         };
-        video2.srcObject = stream;
+        el.srcObject = stream;
+        el.style.display = "block";
     })
     .catch((error) => {
         if (error.name === "OverconstrainedError") {
@@ -85,21 +85,11 @@ async function myOnload() {
     }
 }
 
-// async function loadPage() {
-//     const currentPage = localStorage.getItem("count");
-//     let data;
-//     if (DATA[CITY][currentPage]) {
-//         data = DATA[CITY][currentPage];
-//         const el = document.getElementById("container")
-//         el.innerHTML=data;
-//     }
-// }
-
 async function onCascadeLoad() {
     const CURRENT = parseInt(localStorage.getItem("count"));
     const NEXT = CURRENT + 1;
     const CITY = localStorage.getItem("CITY");
-    console.log("in onCascadeLoad, CITY: ", CITY);
+    //console.log("in onCascadeLoad, CITY: ", CITY);
     if (NEXT <= FILE_COUNT) {
         localStorage.setItem("count", NEXT.toString());
         const ms = DATA[CITY] ? DATA[CITY][NEXT.toString()]["loadInMs"] : 1000;
@@ -114,7 +104,7 @@ async function openNextPage(pageCount) {
     const height = data["height"] || "500";
     const left = data["left"] || Math.random() * (SCREEN_W - parseInt(width));
     const top = data["top"] || Math.random() * (SCREEN_H - parseInt(height));
-    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`) // TODO open at a randomized location on screen
+    window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
 }
 
 async function setLocation(lat, lon) {
@@ -137,6 +127,15 @@ async function setLocation(lat, lon) {
 
 async function startCascade() {
     localStorage.setItem("count", "1");
+
+    // TODO: wrap in a setTimeOut? 
+    await ["#video1", "#video2", "#video3", "#video4", "#video5" ,"#video6", "#video7"].forEach((id) => {
+            const el = document.querySelector(id);
+            proliferateStream(el);
+
+    })
+
+    // await proliferateStream();  
 
     // get data, using city name from local storage
     if (DATA[CITY]) {
