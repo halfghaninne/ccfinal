@@ -104,8 +104,12 @@ async function openNextPage(pageCount) {
     const height = data["height"] || "500";
     const left = data["left"] || Math.random() * (SCREEN_W - parseInt(width));
     const top = data["top"] || Math.random() * (SCREEN_H - parseInt(height));
-    const url = data["url"] || `./${pageCount}.html`;
-    window.open(url, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
+    if (data["url"]) {
+        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=100, height=100, top=${top}, left=${left}`);
+        window.open(data["url"], `Window${pageCount}-url`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
+    } else {
+        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${1}, height=${1}, top=${top}, left=${left}`);
+    };
 }
 
 async function setLocation(lat, lon) {
@@ -129,20 +133,35 @@ async function setLocation(lat, lon) {
 async function startCascade() {
     localStorage.setItem("count", "1");
 
-    // TODO: wrap in a setTimeOut? 
-    await ["#video1", "#video2", "#video3", "#video4", "#video5" ,"#video6", "#video7"].forEach((id) => {
+    const videoIds = ["#video1", "#video2", "#video3", "#video4", "#video5" ,"#video6", "#video7", "#startMessage"];
+    const lastIndex = videoIds.length-1; 
+    const int = 700;
+    let promise = Promise.resolve();
+    videoIds.forEach((id, i) => {
+        promise = promise.then(() => {
             const el = document.querySelector(id);
-            proliferateStream(el);
-
+            // show startMessage
+            if (i === lastIndex) {
+                el.style.display = "block";
+                el.style.zIndex = `${lastIndex}`;
+            } else {
+                proliferateStream(el);
+            }
+            return new Promise((resolve) => {
+                setTimeout(resolve, int)
+            })
+        })
     })
 
-    // TODO: show startMessage
 
     // get data, using city name from local storage
-    if (DATA[CITY]) {
-        window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=500, left=200, top=200");
-    } else {
-        el = document.getElementById("container")
-        el.innerHTML = "<p>no data yet for your current location :(</p>"
-    }  
+    setTimeout(() => {
+        if (DATA[CITY]) {
+            window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=500, left=200, top=200");
+        } else {
+            el = document.getElementById("container")
+            el.innerHTML = "<p>no data yet for your current location :(</p>"
+        }  
+    }, 7500)
+    
 }

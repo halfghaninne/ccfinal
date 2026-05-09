@@ -83,6 +83,10 @@ body {
 
 #startMessage {
     display: none;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: cursive;
+    color: white;
 }
 
 #video2, #video3, #video4, #video5, #video6, #video7 {
