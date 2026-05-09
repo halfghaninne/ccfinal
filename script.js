@@ -37,41 +37,39 @@ async function proliferateStream(el) {
     });
 }
 async function myOnload() {
-    //console.log("UA data: ", navigator.userAgentData)
-    //console.log("platform: ", navigator.platform)
-
     const video1 = document.querySelector("#video1");
-    // const video2 = document.querySelector("#video2");
-    const constraints = {
-        audio: false,
-        video: true,
-    };
 
-    navigator.mediaDevices
-    .getUserMedia(constraints)
-    .then((stream) => {
-        const videoTracks = stream.getVideoTracks();
-        console.log("Got stream with constraints:", constraints);
-        console.log(`Using video device: ${videoTracks[0].label}`);
-        stream.onremovetrack = () => {
-        console.log("Stream ended");
-        };
-        video1.srcObject = stream;
-        // video2.srcObject = stream;
-    })
-    .catch((error) => {
-        if (error.name === "OverconstrainedError") {
-        console.error(
-            `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
-        );
-        } else if (error.name === "NotAllowedError") {
-        console.error(
-            "You need to grant this page permission to access your camera and microphone.",
-        );
-        } else {
-        console.error(`getUserMedia error: ${error.name}`, error);
-        }
-    });
+    proliferateStream(video1);
+
+    // const constraints = {
+    //     audio: false,
+    //     video: true,
+    // };
+
+    // navigator.mediaDevices
+    // .getUserMedia(constraints)
+    // .then((stream) => {
+    //     const videoTracks = stream.getVideoTracks();
+    //     console.log("Got stream with constraints:", constraints);
+    //     console.log(`Using video device: ${videoTracks[0].label}`);
+    //     stream.onremovetrack = () => {
+    //     console.log("Stream ended");
+    //     };
+    //     video1.srcObject = stream;
+    // })
+    // .catch((error) => {
+    //     if (error.name === "OverconstrainedError") {
+    //     console.error(
+    //         `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
+    //     );
+    //     } else if (error.name === "NotAllowedError") {
+    //     console.error(
+    //         "You need to grant this page permission to access your camera and microphone.",
+    //     );
+    //     } else {
+    //     console.error(`getUserMedia error: ${error.name}`, error);
+    //     }
+    // });
     
     if ("geolocation" in navigator) {
         await navigator.geolocation.getCurrentPosition((position) => {
@@ -132,6 +130,7 @@ async function setLocation(lat, lon) {
 
 async function startCascade() {
     localStorage.setItem("count", "1");
+    document.querySelector("#cascadeTrigger").style.display = "none";
 
     const videoIds = ["#video1", "#video2", "#video3", "#video4", "#video5" ,"#video6", "#video7", "#startMessage"];
     const lastIndex = videoIds.length-1; 
