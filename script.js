@@ -3,7 +3,7 @@ let LON;
 let CITY;
 const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
-const FILE_COUNT = 3; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const FILE_COUNT = 5; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {
@@ -14,25 +14,23 @@ async function proliferateStream(el) {
     navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
         const videoTracks = stream.getVideoTracks();
-        console.log("Got stream with constraints:", constraints);
-        console.log(`Using video device: ${videoTracks[0].label}`);
         stream.onremovetrack = () => {
-        console.log("Stream ended");
+            console.log("Stream ended");
         };
         el.srcObject = stream;
         el.style.display = "block";
     })
     .catch((error) => {
         if (error.name === "OverconstrainedError") {
-        console.error(
-            `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
-        );
+            console.error(
+                `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
+            );
         } else if (error.name === "NotAllowedError") {
-        console.error(
-            "You need to grant this page permission to access your camera and microphone.",
-        );
+            console.error(
+                "You need to grant this page permission to access your camera and microphone.",
+            );
         } else {
-        console.error(`getUserMedia error: ${error.name}`, error);
+            console.error(`getUserMedia error: ${error.name}`, error);
         }
     });
 }
@@ -76,7 +74,7 @@ async function openNextPage(pageCount) {
         window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=100, height=100, top=${top}, left=${left}`);
         window.open(data["url"], `Window${pageCount}-url`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
     } else {
-        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${1}, height=${1}, top=${top}, left=${left}`);
+        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
     };
 }
 

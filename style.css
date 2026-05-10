@@ -1,5 +1,5 @@
 body {
-    /* height: 100vh; */
+    margin: 0px;
 }
 
 .flexContainer {
@@ -91,4 +91,20 @@ body {
 
 #video2, #video3, #video4, #video5, #video6, #video7 {
     display: none;
+}
+
+.popup {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    img {
+        width: 100%;
+    }
+}
+.popupText {
+    background-color: white;
+    padding: 10px;
+    z-index: 2;
+    position: absolute;
 }
