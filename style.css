@@ -133,6 +133,10 @@ body {
     position: absolute;
 }
 
+.popupText-offset {
+    margin-top: 55%;
+}
+
 #overlayFB {
     z-index: 2;
     position: absolute;

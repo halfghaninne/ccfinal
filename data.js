@@ -26,10 +26,11 @@ const DATA = {"New York": {
     "20": {"url": "https://www.youtube.com/watch?v=zZDCJ36PYxk&t=6s", "width": "700", "loadInMs": 1000},
     "21": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000}, // live feed 
     "22": {"width": "360", "loadInMs": 1000},
-    "23": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "24": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "25": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
+    "23": {"width": "500", "height": "300", "loadInMs": 1000},
+    "24": {"width": "497", "height": "501", "top": "", "left": "", "loadInMs": 1000},
+    "25": {"width": "319", "height": "239", "loadInMs": 1000},
     "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g", "width": "700", "loadInMs": 1000},
+    // break
     "27": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "28": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "29": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
