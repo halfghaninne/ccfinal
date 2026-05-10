@@ -132,3 +132,13 @@ body {
     z-index: 2;
     position: absolute;
 }
+
+#overlayFB {
+    z-index: 2;
+    position: absolute;
+}
+
+#overlayGoogle {
+    z-index: 2;
+    position: absolute;
+}
