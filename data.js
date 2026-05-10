@@ -31,13 +31,14 @@ const DATA = {"New York": {
     "25": {"width": "319", "height": "239", "loadInMs": 1000},
     "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g", "width": "700", "loadInMs": 1000},
     // break
-    "27": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "28": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "29": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "30": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "31": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "32": {"url": "https://youtu.be/V6yvGLhMOJU?t=565", "width": "700", "loadInMs": 1000},
-    "33": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "34": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "35": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
+    "27": {"width": "366", "height": "207", "top": "", "left": "", "loadInMs": 1000},
+    "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g", width: "400", loadInMs: 1000}, // summer and winter url change
+    "29": {"width": "550", "height": "370", "top": "", "left": "", "loadInMs": 1000},
+    "30": {"url": "https://youtu.be/V6yvGLhMOJU?t=565", "width": "700", "loadInMs": 1000},
+    "31": {"width": "230", "height": "153", "loadInMs": 1000},
+    "32": {"width": "550", "height": "429", "top": "", "left": "", "loadInMs": 1000}, // TODO align placement with #29
+    "33": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000},
+    "34": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000},
+    "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s", "width": "400", "loadInMs": 1000},
+    "36": {"width": "", "loadInMs": 1000},
 }}
