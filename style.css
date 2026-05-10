@@ -21,15 +21,20 @@ body {
     z-index: 100;
 }
 
-.test {
-    z-index: 100;
-}
 
 .button {
+    z-index: 100;
     color: white;
     border: none;
-    background-color: rgb(255 255 128 / 0.1);
+    background-color: rgb(255 255 255 / 0.4);
     font-size: xx-large;
+    margin-top: 33%;
+    padding: 20px;
+}
+
+.button:hover {
+    background-color: rgb(255 255 255 / 0.2);
+
 }
 
 #video1 {
@@ -97,9 +102,28 @@ body {
     a {
         text-decoration: none;
         color: inherit;
+        img {
+            width: 100%;
+        }
     }
     img {
         width: 100%;
+    }
+    img:nth-child(n+2) {
+        display: none;
+    } 
+    embed {
+        width: 100%;
+        height: 100vh;
+    }
+    h1 {
+        color: white;
+        font-size: x-large;
+        font-weight: bolder;
+        z-index: 2;
+        position: absolute;
+        margin: 0px 20%;
+        text-align: center;
     }
 }
 .popupText {
