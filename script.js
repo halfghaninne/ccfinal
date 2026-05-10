@@ -3,7 +3,7 @@ let LON;
 let CITY;
 const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
-const FILE_COUNT = 16; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const FILE_COUNT = 4; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {
@@ -71,7 +71,7 @@ async function openNextPage(pageCount) {
     const left = data["left"] || Math.random() * (SCREEN_W - parseInt(width));
     const top = data["top"] || Math.random() * (SCREEN_H - parseInt(height));
     if (data["url"]) {
-        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=100, height=100, top=${top}, left=${left}`);
+        window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=170, height=128, top=${top}, left=${left}`);
         window.open(data["url"], `Window${pageCount}-url`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
     } else {
         window.open(`./${pageCount}.html`, `Window${pageCount}`, config=`width=${width}, height=${height}, top=${top}, left=${left}`);
