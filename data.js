@@ -7,7 +7,7 @@ const DATA = {"New York": {
     "5": {"width": "480", "height": "720", "loadInMs": 1000},
     // break
     "6": {"url": "https://www.youtube.com/watch?v=rm1NOlZzxVg&t=40s&mode=theatre", "width": "700", "loadInMs": 1000},
-    "7": {"width": "756", "height": "522", "loadInMs": 1000},
+    "7": {"width": "756", "height": "522", "loadInMs": 1000}, // pdf
     "8": {"width": "550", "loadInMs": 1000, "citation" : "SOURCE"},
     "9": {"width": "620", "height": "443", "loadInMs": 1000},
     // break
@@ -15,10 +15,10 @@ const DATA = {"New York": {
     "11": {"width": "1000", "height": "", "top": "", "left": "", "loadInMs": 1000},
     "12": {"width": "546", "height": "345", "top": "", "left": "", "loadInMs": 1000},
     //break
-    "13": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "14": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "15": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "16": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
+    "13": {"width": "370", "height": "225", "top": "", "left": "", "loadInMs": 1000},
+    "14": {"width": "640", "height": "360", "top": "", "left": "", "loadInMs": 1000},
+    "15": {"width": "661", "height": "521", "top": "", "left": "", "loadInMs": 1000}, // pdf
+    "16": {"width": "400", "height": "300", "top": "", "left": "", "loadInMs": 1000},
     // break
     "17": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "18": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
