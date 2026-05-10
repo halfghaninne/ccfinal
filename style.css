@@ -98,6 +98,11 @@ body {
     display: none;
 }
 
+.boxBreath {
+    animation: opacityPulse 8s linear infinite;
+}
+
+
 .popup {
     a {
         text-decoration: none;
@@ -145,4 +150,10 @@ body {
 #overlayGoogle {
     z-index: 2;
     position: absolute;
+}
+
+@keyframes opacityPulse {
+  from { opacity: 1; }
+  50% { opacity: .1; }
+  to { opacity: 1; }
 }

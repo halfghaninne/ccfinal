@@ -1,7 +1,7 @@
 const DATA = {"New York": {
     // "": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
-    "1": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000},
-    "2": {"url": "https://www.youtube.com/watch?v=-PMFbMvPFW4&t=8s&mode=theatre","width": "700", "loadInMs": 1000},
+    "1": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 800},
+    "2": {"url": "https://www.youtube.com/watch?v=-PMFbMvPFW4&t=8s&mode=theatre","width": "700", "left": "650", "loadInMs": 7000},
     "3": {"width": "300", "height": "322", "loadInMs": 1000, "citation": "Portrait of George Stonefish by NMAI."},
     "4": {"url": "https://youtube.com/watch?v=9Cqe7JfP8uA?t=11&mode=theatre&mute=1", "width": "900", "loadInMs": 1000},
     "5": {"width": "480", "height": "720", "loadInMs": 1000},
@@ -30,12 +30,12 @@ const DATA = {"New York": {
     "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g", "width": "700", "loadInMs": 1000},
     "27": {"width": "366", "height": "207", "top": "", "left": "", "loadInMs": 1000},
     "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g", width: "400", loadInMs: 1000}, // TODO summer and winter url change
-    "29": {"width": "550", "height": "370", "top": "", "left": "", "loadInMs": 1000},
+    "29": {"width": "550", "height": "370", "top": "0", "left": "0", "loadInMs": 1000},
     "30": {"url": "https://youtu.be/V6yvGLhMOJU?t=565", "width": "700", "loadInMs": 1000},
     "31": {"width": "230", "height": "153", "loadInMs": 1000},
-    "32": {"width": "550", "height": "429", "top": "", "left": "", "loadInMs": 1000}, // TODO align placement with #29
-    "33": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000},
-    "34": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000},
+    "32": {"width": "550", "height": "429", "top": "370", "left": "0", "loadInMs": 1000}, // TODO align placement with #29
+    "33": {"width": "409", "height": "325", "top": "", "left": "", "loadInMs": 1000},
+    "34": {"width": "500", "height": "333", "top": "", "left": "", "loadInMs": 1000},
     "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s", "width": "400", "loadInMs": 1000},
-    "36": {"width": "", "loadInMs": 1000},
+    "36": {"width": "400", "height": "300", "loadInMs": 1000},
 }}

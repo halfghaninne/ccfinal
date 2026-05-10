@@ -3,7 +3,7 @@ let LON;
 let CITY;
 const SCREEN_W = 1920;
 const SCREEN_H = 1080; 
-const FILE_COUNT = 36; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const FILE_COUNT = 2; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {
@@ -125,8 +125,9 @@ async function startCascade() {
     // get data, using city name from local storage
     setTimeout(() => {
         if (DATA[CITY]) {
-            window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=500, left=200, top=200");
+            window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=100, left=200, top=200");
         } else {
+            window.open(`./popups/start.html`, "_unfencedTop", "width=500, height=100, left=200, top=200");
             el = document.getElementById("container")
             el.innerHTML = "<p>no data yet for your current location :(</p>"
         }  
