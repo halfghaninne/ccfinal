@@ -2,10 +2,10 @@ const DATA = {"New York": {
     // "": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "1": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 800},
     "2": {"url": "https://www.youtube.com/watch?v=-PMFbMvPFW4&t=8s&mode=theatre","width": "700", "left": "650", "loadInMs": 7000},
-    "3": {"width": "300", "height": "322", "loadInMs": 1000, "citation": "Portrait of George Stonefish by NMAI."},
-    "4": {"url": "https://youtube.com/watch?v=9Cqe7JfP8uA?t=11&mode=theatre&mute=1", "width": "900", "loadInMs": 1000},
-    "5": {"width": "480", "height": "720", "loadInMs": 1000},
-    "6": {"url": "https://www.youtube.com/watch?v=rm1NOlZzxVg&t=40s&mode=theatre", "width": "700", "loadInMs": 1000},
+    "3": {"width": "377", "height": "404", "loadInMs": 2000, "citation": "Portrait of George Stonefish, 2019. Courtesy of the National Museum of the American Indian."},
+    "4": {"url": "https://youtube.com/watch?v=9Cqe7JfP8uA?t=11&mode=theatre&mute=1", "width": "900", "loadInMs": 3000},
+    "5": {"width": "480", "height": "720", "loadInMs": 3000},
+    "6": {"url": "https://www.youtube.com/watch?v=rm1NOlZzxVg&t=40s&mode=theatre", "width": "700", "loadInMs": 4000},
     "7": {"width": "756", "height": "522", "loadInMs": 1000}, // pdf
     "8": {"width": "550", "loadInMs": 1000, "citation" : "SOURCE"},
     "9": {"width": "620", "height": "443", "loadInMs": 1000},
@@ -19,7 +19,7 @@ const DATA = {"New York": {
     "17": {"width": "460", "height": "307", "top": "", "left": "", "loadInMs": 1000},
     "18": {"width": "612", "height": "675", "loadInMs": 1000}, // pdf
     "19": {"width": "504", "height": "672", "loadInMs": 1000},
-    "20": {"url": "https://www.youtube.com/watch?v=zZDCJ36PYxk&t=6s", "width": "700", "loadInMs": 1000},
+    "20": {"url": "https://www.youtube.com/watch?v=zZDCJ36PYxk&t=6s&mode=theatre", "width": "700", "loadInMs": 1000},
     // // TODO TODO TODO // //
     "21": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 1000}, // TODO live feed 
     // /// //////////// // //
@@ -27,15 +27,15 @@ const DATA = {"New York": {
     "23": {"width": "500", "height": "300", "loadInMs": 1000},
     "24": {"width": "497", "height": "501", "top": "", "left": "", "loadInMs": 1000},
     "25": {"width": "319", "height": "239", "loadInMs": 1000},
-    "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g", "width": "700", "loadInMs": 1000},
+    "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g&mode=theatre", "width": "700", "loadInMs": 1000},
     "27": {"width": "366", "height": "207", "top": "", "left": "", "loadInMs": 1000},
-    "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g", width: "400", loadInMs: 1000}, // TODO summer and winter url change
+    "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g&mode=theatre", width: "400", loadInMs: 1000}, // TODO summer and winter url change
     "29": {"width": "550", "height": "370", "top": "0", "left": "0", "loadInMs": 1000},
-    "30": {"url": "https://youtu.be/V6yvGLhMOJU?t=565", "width": "700", "loadInMs": 1000},
+    "30": {"url": "https://youtu.be/V6yvGLhMOJU?t=565&mode=theatre", "width": "700", "loadInMs": 1000},
     "31": {"width": "230", "height": "153", "loadInMs": 1000},
     "32": {"width": "550", "height": "429", "top": "370", "left": "0", "loadInMs": 1000}, // TODO align placement with #29
     "33": {"width": "409", "height": "325", "top": "", "left": "", "loadInMs": 1000},
     "34": {"width": "500", "height": "333", "top": "", "left": "", "loadInMs": 1000},
-    "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s", "width": "400", "loadInMs": 1000},
+    "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s&mode=theatre", "width": "400", "loadInMs": 1000},
     "36": {"width": "400", "height": "300", "loadInMs": 1000},
 }}
