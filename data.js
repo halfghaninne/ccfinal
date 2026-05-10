@@ -20,7 +20,7 @@ const DATA = {"New York": {
     "15": {"width": "661", "height": "521", "top": "", "left": "", "loadInMs": 1000}, // pdf
     "16": {"width": "400", "height": "300", "top": "", "left": "", "loadInMs": 1000},
     // break
-    "17": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
+    "17": {"width": "460", "height": "307", "top": "", "left": "", "loadInMs": 3000},
     "18": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "19": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "20": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
