@@ -3,7 +3,7 @@ let LON;
 let CITY;
 // const SCREEN_W = screen.availWidth;
 // const SCREEN_H = screen.availHeight; 
-const FILE_COUNT = 2; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+const FILE_COUNT = 36; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {

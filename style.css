@@ -152,6 +152,7 @@ body {
 }
 .popupText {
     background-color: white;
+    margin: 0px 10%;
     padding: 10px;
     z-index: 2;
     position: absolute;
@@ -159,6 +160,10 @@ body {
 
 .popupText-offset {
     margin-top: 55%;
+}
+
+.popupText-lessOffset {
+    margin-top: 35%;
 }
 
 .popupText-bottomOffset {
