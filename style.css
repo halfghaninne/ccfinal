@@ -108,6 +108,12 @@ body {
     top:1px;   
 }
 
+#msBlink {
+    font-family: monospace;
+    color: lime;
+    animation: fadeOut 1.4s linear infinite;
+}
+
 .fadeOut {
     animation: fadeOut 12s linear infinite;
 }
@@ -155,14 +161,50 @@ body {
     margin-top: 55%;
 }
 
+.popupText-bottomOffset {
+    margin-top: -45%;
+}
+
+.withDropshadow {
+  text-shadow: 2px 2px 4px darkgrey;
+}
+
 #overlayFB {
+    opacity: 1;
+    width: 15%;
     z-index: 2;
     position: absolute;
+    bottom: 10%;
+    right: 10%;
+    animation: spinClockwise 5s linear infinite;
 }
 
 #overlayGoogle {
+    opacity: 1;
+    width: 35%;
     z-index: 2;
     position: absolute;
+    top: 10%;
+    left: 15%;
+    animation: spinCounterClockwise 3s linear infinite;
+}
+
+@keyframes spinClockwise {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spinCounterClockwise {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
 }
 
 @keyframes opacityPulse {

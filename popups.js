@@ -44,7 +44,6 @@ function addFadeIn() {
 }
 
 function logCitation(key) {
-    console.log('logCitation');
     const CITY = localStorage.getItem("CITY");
     if (DATA[CITY][key]["citation"]) {
         console.log(DATA[CITY][key]["citation"])
