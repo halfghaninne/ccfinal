@@ -8,7 +8,7 @@ const DATA = {"New York": {
     "6": {"url": "https://www.youtube.com/watch?v=rm1NOlZzxVg&t=40s&mode=theatre", "width": "700", "loadInMs": 4000},
     "7": {"width": "756", "height": "522", "top": "0", "loadInMs": 2000}, // pdf
     "8": {"width": "550", "loadInMs": 3000, "citation" : "Image 1: Coles, Robert R. 'Wampum Belt and Shells.' The Long Island Indian. Glen Cove, NY: Little Museum, 1954. Image 2: Bolton, Reginald P. 'MAP VIII, D.' Indian Paths in the Great Metropolis. New York: Museum of the American Indian, 1922. Brooklyn Collection, Brooklyn Public Library. Both accessed via the Brooklyn Public Library's Native Americans in Brooklyn Primary Source Packet."},
-    "9": {"width": "620", "height": "443", "left": "10", "loadInMs": 7000, "citation": "Bolton, Reginald P. 'A Circular Bark-Covered House.' Indian Life of Long Ago in the City of New York. Port Washington, NY: I.J. Friedman, 1971."},
+    "9": {"width": "620", "height": "443", "left": "10", "loadInMs": 5000, "citation": "Bolton, Reginald P. 'A Circular Bark-Covered House.' Indian Life of Long Ago in the City of New York. Port Washington, NY: I.J. Friedman, 1971."},
     "10": {"width": "550", "left": "10", "top": "0", "loadInMs": 2000, "citation": "Photo from Wikimedia Creative Commons, taken by Loominosity Z on Flickr."},
     "11": {"width": "600", "height": "300", "loadInMs": 4000, "citation": "Photo from 'The Origin Story of Manhattan's Nerve Center.' Business Insider, 2014. https://www.businessinsider.com/60-hudson-street-documentary-2014-6"},
     "12": {"width": "546", "height": "345", "loadInMs": 1000},
@@ -25,20 +25,20 @@ const DATA = {"New York": {
     "21": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 2000}, // TODO live feed 
     // /// //////////// // //
     "22": {"width": "360", "height": "320", "loadInMs": 2000, "citation": "Photo from Wikimedia Creative Commons."},
-    "23": {"width": "500", "height": "300", "loadInMs": 2000, "citation": "Photo from Wikimedia Creative Commons."},
-    "24": {"width": "497", "height": "501", "loadInMs": 2000, "citation": "Portrait of Derrick Ingram courtesy of the Surveillance Technology Oversight Project."}, // portrait
+    "23": {"width": "500", "height": "300", "loadInMs": 1800, "citation": "Photo from Wikimedia Creative Commons."},
+    "24": {"width": "497", "height": "501", "loadInMs": 1800, "citation": "Portrait of Derrick Ingram courtesy of the Surveillance Technology Oversight Project."}, // portrait
     "25": {"width": "500", "height": "374", "loadInMs": 3000},
     "26": {"url": "https://www.youtube.com/watch?v=w7ASUgIKV0g&mode=theatre", "width": "700", "loadInMs": 2000},
-    "27": {"width": "600", "height": "339", "top": "", "left": "", "loadInMs": 1000}, //TODO; make bigger
+    "27": {"width": "600", "height": "339", "top": "", "left": "", "loadInMs": 1000},
     //////
-    "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g&mode=theatre", width: "700", loadInMs: 1000}, // TODO summer and winter url change
+    "28": {"url": "https://www.youtube.com/watch?v=vQz80JjqJ9g&mode=theatre", width: "800", loadInMs: 1000}, // TODO summer and winter url change
     "29": {"width": "550", "height": "370", "top": "0", "left": "0", "loadInMs": 5000},
-    "30": {"url": "https://youtu.be/V6yvGLhMOJU?t=565&mode=theatre", "width": "700", "loadInMs": 2000},
+    "30": {"url": "https://www.youtube.com/watch?v=V6yvGLhMOJU?t=565&mode=theatre", "width": "700", "loadInMs": 1200},
     "31": {"width": "420", "height": "280", "loadInMs": 1500},
-    "32": {"width": "550", "height": "429", "top": "450", "left": "0", "loadInMs": 2000}, 
+    "32": {"width": "550", "height": "429", "top": "450", "left": "0", "loadInMs": 1200}, 
     ////
-    "33": {"width": "409", "height": "325", "top": "", "left": "", "loadInMs": 1000},
-    "34": {"width": "500", "height": "333", "top": "", "left": "", "loadInMs": 1000},
-    "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s&mode=theatre", "width": "400", "loadInMs": 1000},
-    "36": {"width": "400", "height": "300", "loadInMs": 1000},
+    "33": {"width": "590", "height": "375", "loadInMs": 1000},
+    "34": {"width": "500", "height": "333", "loadInMs": 1000, "citation": "Photo of the Greenidge data facility by Lauren Petracca/Earthjustice via Inside Climate News. https://insideclimatenews.org/news/17082024/greenidge-sues-new-york-environmental-regulators-dresden-power-plant/"},
+    "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s&mode=theatre", "width": "400", "loadInMs": 1800},
+    "36": {"width": "400", "height": "300", "loadInMs": 1800},
 }}
