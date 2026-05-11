@@ -46,7 +46,7 @@ async function myOnload() {
                 LON = position.coords.longitude;
                 setLocation(LAT, LON);
             } else {
-                localStorage.setItem("city", "New York"); // HARD CODED FOR NOW
+                localStorage.setItem("CITY", "New York"); // HARD CODED FOR NOW
             }
         });
     } else {
