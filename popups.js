@@ -33,6 +33,12 @@ async function onloadWithCitation(key) {
     onCascadeLoad();
 }
 
+async function startFeed() {
+    const now = Date.now();
+    feed = document.getElementById("liveCam");
+    feed.src = `https://webcams.nyctmc.org/api/cameras/b5cf34ce-697e-42a1-b22f-8eb2c1f3e79e/image?t=${now}`
+}
+
 function addFadeOut() {
     const img = document.getElementById("topImage");
     img.classList.add("fadeOut");
