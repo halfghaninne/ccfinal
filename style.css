@@ -102,6 +102,19 @@ body {
     animation: opacityPulse 8s linear infinite;
 }
 
+#topImage, #hiddenImage {
+    position: absolute;
+    /* TODO: unsure why this top positioning is needed */
+    top:1px;   
+}
+
+.fadeOut {
+    animation: fadeOut 12s linear infinite;
+}
+
+.fadeIn {
+    animation: fadeIn 12s linear infinite;
+}
 
 .popup {
     a {
@@ -115,7 +128,7 @@ body {
         width: 100%;
     }
     img:nth-child(n+2) {
-        display: none;
+        opacity: 0;
     } 
     embed {
         width: 100%;
@@ -157,3 +170,16 @@ body {
   50% { opacity: .1; }
   to { opacity: 1; }
 }
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    50% { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    50% {opacity: 1; }
+    to { opacity: 0; }
+}
+

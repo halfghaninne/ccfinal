@@ -10,10 +10,10 @@
   <script src="../script.js"></script>
   <script src="../popups.js"></script>
 </head>
-<body onload="onCascadeLoad()">
-  <div class="flexContainer popup" onload="logCitation('8')">
-    <img id="topImage" src="./images/08.ColesRobertR.BLP.png">
-    <img id="hiddenImage" src="./images/08.Bolton,ReginaldP.MapVIII,D.BPL.png">
+<body onload="onloadWithCitation('8')">
+  <div class="flexContainer popup">
+    <img id="topImage" src="./images/08.ColesRobertR.BLP.png" onload="addFadeOut()">
+    <img id="hiddenImage" src="./images/08.Bolton,ReginaldP.MapVIII,D.BPL.png" onload="addFadeIn()">
   </div>
 </body>
 </html>

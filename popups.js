@@ -28,9 +28,25 @@ async function initialCascade() {
     onCascadeLoad();
 }
 
-function logCitation(number) {
+async function onloadWithCitation(key) {
+    logCitation(key)
+    onCascadeLoad();
+}
+
+function addFadeOut() {
+    const img = document.getElementById("topImage");
+    img.classList.add("fadeOut");
+}
+
+function addFadeIn() {
+    const img = document.getElementById("hiddenImage");
+    img.classList.add("fadeIn");
+}
+
+function logCitation(key) {
+    console.log('logCitation');
     const CITY = localStorage.getItem("CITY");
-    if (DATA[CITY][number]["citation"]) {
-        console.log(DATA[CITY][number]["citation"])
+    if (DATA[CITY][key]["citation"]) {
+        console.log(DATA[CITY][key]["citation"])
     }
 }
