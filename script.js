@@ -58,7 +58,6 @@ async function onCascadeLoad() {
     const CURRENT = parseInt(localStorage.getItem("count"));
     const NEXT = CURRENT + 1;
     const CITY = localStorage.getItem("CITY");
-    //console.log("in onCascadeLoad, CITY: ", CITY);
     if (NEXT <= FILE_COUNT) {
         localStorage.setItem("count", NEXT.toString());
         const ms = DATA[CITY] ? DATA[CITY][NEXT.toString()]["loadInMs"] : 1000;
@@ -68,7 +67,6 @@ async function onCascadeLoad() {
 }
 
 async function openNextPage(pageCount) {
-    console.log("DATA: ", DATA); // TODO: remove
     const data = DATA[localStorage.getItem("CITY")][pageCount] || {};
     const width = data["width"] || "500";
     const height = data["height"] || "500";

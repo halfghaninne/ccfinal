@@ -24,7 +24,6 @@ async function initialCascade() {
     const startMessage = document.getElementById("startMessage");
     body.style.backgroundColor = getSeasonColor(dtObj.getMonth());
     startMessage.style.display = "block";
-    console.log('initial cascade fired')
     onCascadeLoad();
 }
 
