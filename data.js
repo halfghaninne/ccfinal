@@ -1,8 +1,11 @@
+const SCREEN_W = screen.availWidth;
+const SCREEN_H = screen.availHeight; 
+
 const DATA = {"New York": {
     // "": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 3000},
     "1": {"width": "", "height": "", "top": "", "left": "", "loadInMs": 800},
     //// NATIVE LAND ////
-    "2": {"url": "https://www.youtube.com/watch?v=-PMFbMvPFW4&t=8s&mode=theatre","width": "700", "left": "650", "loadInMs": 7000},
+    "2": {"url": "https://www.youtube.com/watch?v=-PMFbMvPFW4&t=8s&mode=theatre","width": "700", "height": "584", "top": `${(SCREEN_H-350)/2}`, "left": `${(SCREEN_W-292)/2}`,"loadInMs": 7000}, // left: 650
     "3": {"width": "377", "height": "404", "loadInMs": 2000, "citation": "Portrait of George Stonefish, 2019. Photo courtesy of the National Museum of the American Indian."}, // portrait 
     "4": {"url": "https://youtube.com/watch?v=9Cqe7JfP8uA?t=11&mode=theatre&mute=1", "width": "900", "loadInMs": 3000},
     "5": {"width": "480", "height": "720", "loadInMs": 3000, "citation": "Photo courtesy of The Public History Project."},
@@ -39,5 +42,5 @@ const DATA = {"New York": {
     "33": {"width": "590", "height": "375", "loadInMs": 1000},
     "34": {"width": "500", "height": "333", "loadInMs": 1000, "citation": "Photo of the Greenidge data facility by Lauren Petracca/Earthjustice via Inside Climate News. https://insideclimatenews.org/news/17082024/greenidge-sues-new-york-environmental-regulators-dresden-power-plant/"},
     "35": {"url": "https://www.youtube.com/watch?v=tDsS9ugo2TA&t=36s&mode=theatre", "width": "400", "loadInMs": 1800},
-    "36": {"width": "400", "height": "300", "loadInMs": 1800},
+    "36": {"width": "400", "height": "300", "top": `${SCREEN_H/2}`, "left": `${SCREEN_W/2}`, "loadInMs": 1800},
 }}

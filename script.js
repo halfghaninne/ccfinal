@@ -1,9 +1,9 @@
 let LAT;
 let LON;
 let CITY;
-const SCREEN_W = 1920;
-const SCREEN_H = 1080; 
-const FILE_COUNT = 36; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
+// const SCREEN_W = screen.availWidth;
+// const SCREEN_H = screen.availHeight; 
+const FILE_COUNT = 2; // hard-coded for this iteration, would involve more advanced JS bundling to load dynamically.
 
 async function proliferateStream(el) {
     const constraints = {
@@ -41,10 +41,13 @@ async function myOnload() {
     
     if ("geolocation" in navigator) {
         await navigator.geolocation.getCurrentPosition((position) => {
-            LAT = position.coords.latitude;
-            LON = position.coords.longitude;
-            console.log(LAT, LON);
-            setLocation(LAT, LON);
+            if (API_KEY) {
+                LAT = position.coords.latitude;
+                LON = position.coords.longitude;
+                setLocation(LAT, LON);
+            } else {
+                localStorage.setItem("city", "New York"); // HARD CODED FOR NOW
+            }
         });
     } else {
         console.log("PLEASE ALLOW BROWSER TO USE YOUR LOCATION :)")
@@ -88,7 +91,6 @@ async function setLocation(lat, lon) {
 
             const result = await response.json();
             CITY = result.address.city
-            console.log(CITY);
             localStorage.setItem("CITY", CITY);
         } catch (error) {
             console.error(error.message);
