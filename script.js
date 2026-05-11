@@ -68,6 +68,7 @@ async function onCascadeLoad() {
 }
 
 async function openNextPage(pageCount) {
+    console.log("DATA: ", DATA); // TODO: remove
     const data = DATA[localStorage.getItem("CITY")][pageCount] || {};
     const width = data["width"] || "500";
     const height = data["height"] || "500";
