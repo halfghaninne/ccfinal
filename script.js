@@ -41,7 +41,7 @@ async function myOnload() {
     
     if ("geolocation" in navigator) {
         await navigator.geolocation.getCurrentPosition((position) => {
-            if (API_KEY) {
+            if (typeof API_KEY !== 'undefined') {
                 LAT = position.coords.latitude;
                 LON = position.coords.longitude;
                 setLocation(LAT, LON);
